@@ -5,7 +5,12 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <h1 className="text-center">Cats</h1>
+        <header className="shadow mt-3">
+          <h1 className="text-center">
+            <i className="fa-solid fa-cat"></i> Cats{" "}
+            <i className="fa-solid fa-cat"></i>
+          </h1>
+        </header>
         <CatFacts />
       </div>
     </div>

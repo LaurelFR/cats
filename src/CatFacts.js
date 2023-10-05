@@ -9,7 +9,6 @@ export default function CatFacts() {
   const [fact3, setFact3] = useState("");
 
   function handleResponse(response) {
-    console.log(response.data.data);
     setFact1(response.data.data[0]);
     setFact2(response.data.data[1]);
     setFact3(response.data.data[2]);
@@ -30,13 +29,15 @@ export default function CatFacts() {
     return (
       <div className="CatFacts">
         <div className="d-flex justify-content-center">
-          <button className="btn fact-button" onClick={handleClick}>
+          <button className="btn fact-button shadow" onClick={handleClick}>
             Generate cat facts!
           </button>
         </div>
-        <h2>{fact1}</h2>
-        <h2>{fact2}</h2>
-        <h2>{fact3}</h2>
+        <div className="fact-box">
+          <h2 className="fact shadow">{fact1}</h2>
+          <h2 className="fact shadow">{fact2}</h2>
+          <h2 className="fact shadow">{fact3}</h2>
+        </div>
       </div>
     );
   } else
